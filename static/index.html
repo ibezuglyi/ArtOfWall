@@ -14,21 +14,21 @@
         margin: 0px -24%;
         padding: 30% 0px
       }
-	  
+
 	  .navbar-fixed {
     top: 0;
     z-index: 200;
   position: fixed;
     width: 100%;
 }
-    </style> 
+    </style>
 </head>
 <body>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-    <!--   Map section   -->  
+    <!--   Map section   -->
 <div id="map-canvas"></div>
-	
+
 	<!--   End map section   -->
     </div>
   </div>
@@ -126,7 +126,6 @@
     <br><br>
 
     <div class="section">
-
     </div>
   </div>
 
@@ -197,9 +196,9 @@
 	<br>
 	<br>
 	</p>
-	
-	
-	
+
+
+
   </footer>
 
 
@@ -207,17 +206,17 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  
-<!--   Nav scripts   -->  
+
+<!--   Nav scripts   -->
 <script>
   $(document).ready(function() {
   var original_navpos = $('#my-navbar').offset();
-  
-  
+
+
   $(window).scroll(function () {
       //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
+      //.log to determine when you want the
+      //nav bar to stick.
      var navpos = $('#my-navbar').offset();
 	 console.log(navpos.top);
 	 console.log($(window).scrollTop());
@@ -229,13 +228,13 @@
   });
 });
 </script>
-<!--   End nav scripts   -->  
+<!--   End nav scripts   -->
   <!--   Map scripts   -->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script>
-	
-	
-	
+
+
+
 var map;
 function initialize() {
   var mapOptions = {
@@ -249,8 +248,8 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
-  
-  
+
+
   <!--   End map scripts   -->
   </body>
 </html>
