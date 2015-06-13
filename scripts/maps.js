@@ -1,6 +1,6 @@
 
 var map;
-function initialize() {
+function map_initialize() {
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(pos) {
       var lat = pos.coords.latitude;
