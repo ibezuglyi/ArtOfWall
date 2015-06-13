@@ -1,10 +1,21 @@
 App = {};
+
 (function(app){
   var viewModel = {};
   viewModel.name = ko.observable();
-  app.main = viewModel;
+  App.main = viewModel;
+  var messagesRef = new Firebase('https://glaring-heat-5949.firebaseio.com/');
 
+  messagesRef.set({
+    places:[
 
-  var messagesRef = new Firebase('https://artofwall.firebaseio.com');
+      {
+        location:"",
+        img:"",
+        time:""
+      }
+    ]
+});
+
   ko.applyBindings(app.main);
 }(App));
