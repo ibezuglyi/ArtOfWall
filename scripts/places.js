@@ -9,7 +9,7 @@ var Places = function(db) {
   this.places = ko.observableArray();
   this.searchToken = ko.observable();
   this.filterBy = function(token) {
-      var filteredItems = _.filter(this.dbcollection, function(item) {
+      var filteredItems = _.filter(_self.dbcollection, function(item) {
         return item.description.indexOf(token) > 0 ||
           item.name.indexOf(token) > 0;
       });
@@ -17,7 +17,7 @@ var Places = function(db) {
 
     },
     this._initPlaces = function(collection){
-      var mappedCollection = _.map(dbcollection, function(place_data) {
+      var mappedCollection = _.map(collection, function(place_data) {
         return new Place(place_data);
       });
       _self.places(mappedCollection);
