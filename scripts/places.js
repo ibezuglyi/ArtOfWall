@@ -11,8 +11,8 @@ var Places = function(db) {
   this.filterBy = function() {
     var filter = _self.searchToken();
       var filteredItems = _.filter(_self.dbcollection, function(item) {
-        return item.description.indexOf(token) > 0 ||
-          item.name.indexOf(token) > 0;
+        return item.description.indexOf(filter) > 0 ||
+          item.name.indexOf(filter) > 0;
       });
       _self._initPlaces(filteredItems);
 
