@@ -3,11 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script type="text/javascript" src="libs/konckout.js" />
-
-    </script>
+    <script type="text/javascript" src="libs/konckout.js" ></script>
+    <script type="text/javascript" src="libs/firebase.js" ></script>
+    <script type="text/javascript" src="vms/main.js"></script>
+    <link rel="stylesheet" href="libs/materialize.min.css" charset="utf-8"></link>
   </head>
   <body>
-hello
+    <div class="row">
+          <div class="col s3">
+            Grey navigation panel
+            <input data-bind="value: name" type="text"></input>
+            <span data-bind="text: name"></span>
+          </div>
+          <div class="col s9">
+             Teal page content
+          </div>
+        </div>
   </body>
 </html>
