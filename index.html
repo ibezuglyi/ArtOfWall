@@ -6,6 +6,9 @@
     <script type="text/javascript" src="libs/konckout.js" ></script>
     <script type="text/javascript" src="libs/firebase.js" ></script>
     <script type="text/javascript" src="vms/main.js"></script>
+    <script type="text/javascript" src="libs/jquery.js">
+
+    </script>
     <link rel="stylesheet" href="libs/materialize.min.css" charset="utf-8"></link>
   </head>
   <body>
@@ -21,3 +24,8 @@
         </div>
   </body>
 </html>
+<script type="text/javascript">
+  $(document).ready(function(){
+    ko.applyBindings(new Place());
+  })
+</script>
