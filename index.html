@@ -41,11 +41,10 @@
           <div class="card">
             <div class="card-image">
               <img class="thumb-img" data-bind="attr:{src:img}">
-              <span class="card-title"></span>
+              <span class="card-title" data-bind="text: name"></span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p data-bind="text: description"></p>
             </div>
             <div class="card-action">
               <a href="#">Show on map</a>
