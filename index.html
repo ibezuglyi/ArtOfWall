@@ -102,8 +102,6 @@
       //.log to determine when you want the
       //nav bar to stick.
       var navpos = $('#my-navbar').offset();
-      console.log(navpos.top);
-      console.log($(window).scrollTop());
       if ($(window).scrollTop() > navpos.top) {
         $('#my-navbar').addClass('navbar-fixed');
       } else if ($(window).scrollTop() < original_navpos.top) {
