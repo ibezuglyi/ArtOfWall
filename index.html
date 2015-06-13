@@ -20,7 +20,7 @@
         width: 300px;
       }
     </style>
-    
+
   </head>
   <body>
     <div class="row">
@@ -37,6 +37,12 @@
 </html>
 <script type="text/javascript">
   $(document).ready(function(){
+    var mapOptions = {
+      zoom: 8,
+      center: new google.maps.LatLng(51.107897, 17.044049)
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
     var db = new Firebase("https://glaring-heat-5949.firebaseio.com/");
     ko.applyBindings(new Places(db));
   })
