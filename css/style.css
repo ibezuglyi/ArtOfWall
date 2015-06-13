@@ -1,7 +1,7 @@
 #map-canvas {
-  height: 100%;
-  margin: 0px -24%;
-  padding: 30% 0px
+  /*height: 40%;*/
+  margin: 0px 0%;
+  padding: 20% 0px
   }
 
 .navbar-fixed {
@@ -9,4 +9,15 @@
   z-index: 200;
   position: fixed;
   width: 100%;
+}
+.card .card-image img.thumb-img{
+  width: 250px;
+  height: 250px;
+}
+.card-item
+{
+  display: block;
+  float: left;
+  width: 30%;
+  padding: 10px;
 }
