@@ -16,6 +16,7 @@ var Places = function(db) {
   }
 
   db.child("places").on("value", function(snapshot) {
+    console.log(snapshot.val());
     var collection = _.map(snapshot.val(), function(place_data){
       console.log(place_data);
       return new Place(place_data);
