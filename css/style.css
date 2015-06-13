@@ -1,0 +1,12 @@
+#map-canvas {
+  height: 100%;
+  margin: 0px -24%;
+  padding: 30% 0px
+  }
+
+.navbar-fixed {
+  top: 0;
+  z-index: 200;
+  position: fixed;
+  width: 100%;
+}
