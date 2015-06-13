@@ -6,8 +6,9 @@
     <script type="text/javascript" src="libs/underscore-min.js" ></script>
     <script type="text/javascript" src="libs/konckout.js" ></script>
     <script type="text/javascript" src="libs/firebase.js" ></script>
-    <script type="text/javascript" src="vms/main.js"></script>
+
     <script type="text/javascript" src="vms/places.js"></script>
+    <script type="text/javascript" src="vms/place.js"></script>
     <script type="text/javascript" src="libs/jquery.js">
     </script>
     <link rel="stylesheet" href="libs/materialize.min.css" charset="utf-8"></link>
@@ -16,12 +17,14 @@
     <div class="row">
           <div class="col s3">
             Grey navigation panel
-            <input data-bind="value: name" type="text"></input>
-            <span data-bind="text: name"></span>
+            <input placeholder="location" data-bind="value: newLocation" type="text" value="51.1046042,17.0472643"></input>
+            <input placeholder="img url" data-bind="value: newImg" type="text"></input>
+            <input data-bind="click: onAddNewPlace" type="button" name="name" value="Add">
           </div>
           <div class="col s9">
              <div class="" data-bind="foreach: places">
                <span data-bind="text:location "></span>
+               <img data-bind="att:{src:img}" alt="" />
              </div>
           </div>
         </div>
