@@ -17,7 +17,6 @@
 .card-item
 {
   display: block;
-  float: left;
   width: 30%;
   padding: 10px;
 }

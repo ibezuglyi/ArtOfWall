@@ -19,12 +19,13 @@
     <div id="map-canvas"></div>
 
     <div id="my-navbar">
-      <nav class="light-blue lighten-1" role="navigation" >
+      <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container">
-          <a id="logo-container" href="#" class="brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
-          </ul>
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label for="search"><i class="mdi-action-search"></i></label>
+            <i class="mdi-navigation-close"></i>
+          </div>
 
           <ul id="nav-mobile" class="side-nav">
             <li><a href="#">Navbar Link</a></li>
@@ -36,7 +37,7 @@
 
     <div class="container">
       <div class="row" data-bind="foreach: places">
-        <div class="card-item">
+        <div class="card-item left">
           <div class="card">
             <div class="card-image">
               <img class="thumb-img" data-bind="attr:{src:img}">
@@ -49,19 +50,46 @@
             <div class="card-action">
               <a href="#">Show on map</a>
               <a href='#'>Rate this place</a>
+
             </div>
           </div>
         </div>
+
       </div>
     </div>
-    <footer class="page-footer orange">
-      FOOTER
+    <footer class="page-footer orange">  <div class="row">
+    <div class="input-field col s3">
+      <input placeholder="name" id="name" data-bind="value: name" type="text"></input>
+
+    </div>
+    <div class="input-field col s3">
+      <input placeholder="Img url" id="url" data-bind="value: newImg" type="text"></input>
+    </div>
+    <div class="input-field col s3">
+      <input placeholder="lon" id="lon" data-bind="value: newLon" type="text"></input>
+    </div>
+    <div class="input-field col s3">
+      <input placeholder="lat" id="lat" data-bind="value: newLat" type="text"></input>
+    </div>
+  </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea placeholder="Description" id="desc" data-bind="value: newDescription" type="text"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <a data-bind="click: onAddNewPlace" class="waves-effect waves-light btn-large">Add Place</a>
+        </div>
+      </div>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </footer>
+
+
   </body>
 </html>
 <script type="text/javascript">
-  $(document).ready(function(){
+  $(document).ready(function() {
     google.maps.event.addDomListener(window, 'load', initialize);
     var db = new Firebase("https://glaring-heat-5949.firebaseio.com/");
     ko.applyBindings(new Places(db));
