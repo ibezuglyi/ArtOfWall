@@ -22,8 +22,8 @@
       <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container">
           <div class="input-field">
-            <input id="search" data-bind="value: searchToken" type="search" required>
-            <label data-bind="event:{keypress: filterBy} " for="search"><i class="mdi-action-search"></i></label>
+            <input id="search" type="search" required>
+            <label for="search"><i class="mdi-action-search"></i></label>
             <i class="mdi-navigation-close"></i>
           </div>
 
@@ -102,8 +102,6 @@
       //.log to determine when you want the
       //nav bar to stick.
       var navpos = $('#my-navbar').offset();
-      console.log(navpos.top);
-      console.log($(window).scrollTop());
       if ($(window).scrollTop() > navpos.top) {
         $('#my-navbar').addClass('navbar-fixed');
       } else if ($(window).scrollTop() < original_navpos.top) {
