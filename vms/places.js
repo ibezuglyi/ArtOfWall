@@ -1,7 +1,8 @@
 var Places = function(db) {
   this.db = db;
   var _self = this;
-  this.newLocation = ko.observable();
+  this.newLon = ko.observable();
+  this.newLat = ko.observable();
   this.newImg = ko.observable();
   this.places = ko.observableArray();
 
