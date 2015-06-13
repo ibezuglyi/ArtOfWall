@@ -9,14 +9,16 @@
     <script type="text/javascript" src="libs/firebase.js"></script>
     <script type="text/javascript" src="scripts/places.js"></script>
     <script type="text/javascript" src="scripts/place.js"></script>
-    <script type="text/javascript" src="scripts/init_firebase.js" />
+
     <link rel="stylesheet" href="libs/materialize.min.css" charset="utf-8"></link>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="scripts/maps.js"></script>
+
     <link rel="stylesheet" href="css/style.css" />
 
   </head>
   <body>
-
+  <div id="map-canvas"></div>asdasda
         <div class="" data-bind="foreach: places">
           <span data-bind="text:lat"></span>
           <span data-bind="text:lon"></span>
@@ -25,3 +27,12 @@
 
   </body>
 </html>
+<script type="text/javascript">
+  $(document).ready(function(){
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    var db = new Firebase("https://glaring-heat-5949.firebaseio.com/");
+    ko.applyBindings(new Places(db));
+
+  })
+</script>
