@@ -10,3 +10,14 @@
   position: fixed;
   width: 100%;
 }
+.card .card-image img.thumb-img{
+  width: 250px;
+  height: 250px;
+}
+.card-item
+{
+  display: block;
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
