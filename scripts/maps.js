@@ -1,3 +1,4 @@
+
 var map;
 function initialize() {
   if(navigator.geolocation) {

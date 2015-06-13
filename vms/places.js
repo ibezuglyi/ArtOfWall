@@ -10,16 +10,17 @@ var Places = function(db) {
 
   this.onAddNewPlace = function() {
     db.child("places").push({
-      lat:        _self.newLat() || 0,
-      lon:        _self.newLon() || 0,
-      name:       _self.newName()||"no name",
-      description: _self.newDescription() || "description",
-      img:        _self.newImg()||"",
+      lat:        _self.newLat(),
+      lon:        _self.newLon(),
+      name:       _self.newName(),
+      description:_self.newDescription(),
+      img:        _self.newImg(),
       date:       new Date()
 
     });
 
     _self.newImg("");
+    _self.newLocation("");
     _self.newLat("");
     _self.newLon("");
     _self.newName("");

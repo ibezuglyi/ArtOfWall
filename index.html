@@ -14,74 +14,31 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="scripts/maps.js"></script>
     <link rel="stylesheet" href="css/style.css" />
-
   </head>
   <body>
-    <!--   Map section   -->
-<div id="map-canvas"></div>
+    <div id="map-canvas"></div>
 
-  <!--   End map section   -->
-    </div>
-  </div>
-  <div id="my-navbar">
-  <nav class="light-blue lighten-1" role="navigation" >
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    </div>
-  </nav>
-</div>
-
- <div class="container">
-<div id="hoverable" class="section scrollspy">
-        <h2 class="header">Hoverable Table</h2>
-        <div class="row">
-          <div class="col s12">
-            <p>Add <code class=" language-markup">class="hoverable"</code> to the table tag for a hoverable table</p>
-            <table class="hoverable responsive-table">
-              <thead>
-                <tr>
-                    <th data-field="id">Name</th>
-                    <th data-field="name">Item Name</th>
-                    <th data-field="price">Item Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Alvin</td>
-                  <td>Eclair</td>
-                  <td>$0.87</td>
-                </tr>
-                <tr>
-                  <td>Alan</td>
-                  <td>Jellybean</td>
-                  <td>$3.76</td>
-                </tr>
-                <tr>
-                  <td>Jonathan</td>
-                  <td>Lollipop</td>
-                  <td>$7.00</td>
-                </tr>
-                <tr>
-                  <td>Shannon</td>
-                  <td>KitKat</td>
-                  <td>$9.99</td>
-                </tr>
-              </tbody>
-            </table>
+    <div id="my-navbar">
+      <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label for="search"><i class="mdi-action-search"></i></label>
+            <i class="mdi-navigation-close"></i>
           </div>
+
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         </div>
-      </div>
-      </div>
-        <div class="" data-bind="foreach: places">
-          <div class="card-item">
-            <div class="card">
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row" data-bind="foreach: places">
+        <div class="card-item left">
+          <div class="card">
             <div class="card-image">
               <img class="thumb-img" data-bind="attr:{src:img}">
               <span class="card-title"></span>
@@ -93,123 +50,66 @@
             <div class="card-action">
               <a href="#">Show on map</a>
               <a href='#'>Rate this place</a>
+
             </div>
           </div>
-          </div>
-
-        </div>
-<div class="section no-pad-bot" id="index-banner">
-
-    <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="mdi-image-flash-on"></i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="mdi-social-group"></i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="mdi-action-settings"></i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
       </div>
+    </div>
+    <footer class="page-footer orange">  <div class="row">
+    <div class="input-field col s3">
+      <input placeholder="name" id="name" data-bind="value: name" type="text"></input>
 
     </div>
-    <br><br>
-
-    <div class="section">
+    <div class="input-field col s3">
+      <input placeholder="Img url" id="url" data-bind="value: newImg" type="text"></input>
+    </div>
+    <div class="input-field col s3">
+      <input placeholder="lon" id="lon" data-bind="value: newLon" type="text"></input>
+    </div>
+    <div class="input-field col s3">
+      <input placeholder="lat" id="lat" data-bind="value: newLat" type="text"></input>
     </div>
   </div>
-
-  <footer class="page-footer orange">
-    <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
+        <div class="input-field col s12">
+          <textarea placeholder="Description" id="desc" data-bind="value: newDescription" type="text"></textarea>
         </div>
       </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      <div class="row">
+        <div class="input-field col s12">
+          <a data-bind="click: onAddNewPlace" class="waves-effect waves-light btn-large">Add Place</a>
+        </div>
       </div>
-    </div>
-  </footer>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-<!--   Nav scripts   -->
-<script>
-  $(document).ready(function() {
-  var original_navpos = $('#my-navbar').offset();
-
-
-  $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the
-      //nav bar to stick.
-     var navpos = $('#my-navbar').offset();
-   console.log(navpos.top);
-   console.log($(window).scrollTop());
-    if ($(window).scrollTop() > navpos.top) {
-      $('#my-navbar').addClass('navbar-fixed');
-    } else if ($(window).scrollTop() < original_navpos.top) {
-      $('#my-navbar').removeClass('navbar-fixed');
-    }
-  });
-});
-</script>
-<!--   End nav scripts   -->
   </body>
 </html>
 <script type="text/javascript">
-  $(document).ready(function(){
+  $(document).ready(function() {
     google.maps.event.addDomListener(window, 'load', initialize);
     var db = new Firebase("https://glaring-heat-5949.firebaseio.com/");
     ko.applyBindings(new Places(db));
-  })
+
+
+    var original_navpos = $('#my-navbar').offset();
+
+    $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the
+      //nav bar to stick.
+      var navpos = $('#my-navbar').offset();
+      console.log(navpos.top);
+      console.log($(window).scrollTop());
+      if ($(window).scrollTop() > navpos.top) {
+        $('#my-navbar').addClass('navbar-fixed');
+      } else if ($(window).scrollTop() < original_navpos.top) {
+        $('#my-navbar').removeClass('navbar-fixed');
+      }
+    });
+
+  });
 </script>
