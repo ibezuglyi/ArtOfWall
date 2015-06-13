@@ -6,10 +6,9 @@
     <script type="text/javascript" src="libs/underscore-min.js" ></script>
     <script type="text/javascript" src="libs/konckout.js" ></script>
     <script type="text/javascript" src="libs/firebase.js" ></script>
-    <script type="text/javascript" src="vms/main.js"></script>
     <script type="text/javascript" src="vms/places.js"></script>
-    <script type="text/javascript" src="libs/jquery.js">
-    </script>
+    <script type="text/javascript" src="vms/place.js"></script>
+    <script type="text/javascript" src="libs/jquery.js"></script>
     <link rel="stylesheet" href="libs/materialize.min.css" charset="utf-8"></link>
   </head>
   <body>
@@ -22,6 +21,7 @@
           <div class="col s9">
              <div class="" data-bind="foreach: places">
                <span data-bind="text:location "></span>
+               <img data-bind="attr:{src:img}">
              </div>
           </div>
         </div>
