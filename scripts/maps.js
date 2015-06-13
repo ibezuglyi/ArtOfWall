@@ -1,6 +1,6 @@
 
 var map;
-function initialize() {
+function map_initialize() {
   var mapOptions = {
     zoom: 8,
     center: new google.maps.LatLng(51.107897, 17.044049)
