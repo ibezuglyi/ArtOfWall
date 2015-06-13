@@ -9,6 +9,7 @@
     <script type="text/javascript" src="vms/places.js"></script>
     <script type="text/javascript" src="vms/place.js"></script>
     <script type="text/javascript" src="libs/jquery.js"></script>
+
     <link rel="stylesheet" href="libs/materialize.min.css" charset="utf-8"></link>
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -35,6 +36,7 @@
   </head>
   <body>
     <div class="row">
+<<<<<<< HEAD
       <div class="col s3">
         Grey navigation panel
         <input data-bind="value: name" type="text"></input>
@@ -46,6 +48,22 @@
           <span data-bind="text:lat"></span>
           <span data-bind="text:lon"></span>
           <img data-bind="attr:{src:img}">
+=======
+          <div class="col s3">
+            Grey navigation panel
+            <input placeholder="location" data-bind="value: newLocation" type="text" value="51.1046042,17.0472643"></input>
+            <input placeholder="img url" data-bind="value: newImg" type="text"></input>
+            <input data-bind="click: onAddNewPlace" type="button" name="name" value="Add">
+          </div>
+          <div class="col s9">
+             <div class="" data-bind="foreach: places">
+               <span data-bind="text:location "></span>
+
+               <img data-bind="attr:{src:img}">
+
+             </div>
+          </div>
+>>>>>>> 5b2528be76c08cb9175bfc6ca2c8d1e692b7d624
         </div>
       </div>
     </div>
