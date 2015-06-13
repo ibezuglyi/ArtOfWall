@@ -10,8 +10,6 @@ function initialize() {
         );
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-
 function add_marker(place){
   console.log("MAPS >> add marker: " + place.lon() + "x" + place.lat());
   var marker = new google.maps.Marker({
