@@ -8,7 +8,8 @@ var Places = function(db) {
   this.newName = ko.observable();
   this.places = ko.observableArray();
   this.searchToken = ko.observable();
-  this.filterBy = function(token) {
+  this.filterBy = function() {
+    var filter = _self.searchToken();
       var filteredItems = _.filter(_self.dbcollection, function(item) {
         return item.description.indexOf(token) > 0 ||
           item.name.indexOf(token) > 0;
