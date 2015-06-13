@@ -7,6 +7,4 @@ var DB = function(){
   this.FindPlace = function(){
 
   };
-
-
 }

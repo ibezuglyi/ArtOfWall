@@ -3,47 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script type="text/javascript" src="libs/underscore-min.js" ></script>
-    <script type="text/javascript" src="libs/konckout.js" ></script>
-    <script type="text/javascript" src="libs/firebase.js" ></script>
-    <script type="text/javascript" src="vms/places.js"></script>
-    <script type="text/javascript" src="vms/place.js"></script>
     <script type="text/javascript" src="libs/jquery.js"></script>
-
+    <script type="text/javascript" src="libs/underscore-min.js"></script>
+    <script type="text/javascript" src="libs/knockout.js"></script>
+    <script type="text/javascript" src="libs/firebase.js"></script>
+    <script type="text/javascript" src="scripts/places.js"></script>
+    <script type="text/javascript" src="scripts/place.js"></script>
+    <script type="text/javascript" src="scripts/init_firebase.js" />
     <link rel="stylesheet" href="libs/materialize.min.css" charset="utf-8"></link>
-
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
-    <style>
-      #map-canvas {
-        height: 300px;
-        width: 300px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
 
   </head>
   <body>
-    <div class="row">
-      <div class="col s9">
-        <div id="map-canvas"></div>
+
         <div class="" data-bind="foreach: places">
           <span data-bind="text:lat"></span>
           <span data-bind="text:lon"></span>
           <img data-bind="attr:{src:img}">
         </div>
-      </div>
-    </div>
+
   </body>
 </html>
-<script type="text/javascript">
-  $(document).ready(function(){
-    var mapOptions = {
-      zoom: 8,
-      center: new google.maps.LatLng(51.107897, 17.044049)
-    };
-    var map = new google.maps.Map(document.getElementById('map-canvas'),
-        mapOptions);
-    var db = new Firebase("https://glaring-heat-5949.firebaseio.com/");
-    ko.applyBindings(new Places(db));
-  })
-</script>
