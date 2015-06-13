@@ -1,13 +1,19 @@
 var map;
 function initialize() {
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(51.107897, 17.044049)
-  };
-  map = new google.maps.Map(
-          document.getElementById('map-canvas'),
-          mapOptions
-        );
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(pos) {
+      var lat = pos.coords.latitude;
+      var lon = pos.coords.longitude;
+      var mapOptions = {
+        zoom: 8,
+        center: new google.maps.LatLng(lat, lon)
+      };
+      map = new google.maps.Map(
+              document.getElementById('map-canvas'),
+              mapOptions
+            );
+    });
+  }
 }
 
 function add_marker(place){

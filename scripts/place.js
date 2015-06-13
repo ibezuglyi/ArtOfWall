@@ -1,8 +1,6 @@
-var Place = function(data, map){
+var Place = function(data){
   this.lat = ko.observable(data.lat);
   this.lon = ko.observable(data.lon);
   this.img = ko.observable(data.img);
-  if(typeof map !== "undefined"){
-    map.add_marker(this);
-  }
+  add_marker(this);
 }

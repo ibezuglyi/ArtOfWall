@@ -1,4 +1,4 @@
-var Places = function(db, map) {
+var Places = function(db) {
   this.db = db;
   var _self = this;
   this.newLon = ko.observable();
@@ -9,7 +9,7 @@ var Places = function(db, map) {
   db.child("places").on("value", function(snapshot) {
     var collection = _.map(snapshot.val(), function(place_data){
       console.log(place_data);
-      return new Place(place_data, map);
+      return new Place(place_data);
     });
     _self.places(collection);
   });
