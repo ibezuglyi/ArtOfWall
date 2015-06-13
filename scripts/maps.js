@@ -7,7 +7,7 @@ function map_initialize() {
       var lon = pos.coords.longitude;
       console.log("current pos: " + lat + "x" + lon)
       var mapOptions = {
-        zoom: 8,
+        zoom: 13,
         center: new google.maps.LatLng(lat, lon)
       };
       map = new google.maps.Map(
@@ -27,11 +27,11 @@ function add_marker(place){
   var marker = new google.maps.Marker({
     position: new google.maps.LatLng( place.lon(), place.lat()),
     map: map,
-    title: "asd" //place.name()
+    title: place.name()
   });
 
   var infowindow = new google.maps.InfoWindow({
-    content: "<img src='" + place.img() + "' style='width: 50px; height: 50px;' />"
+    content: "<img src='" + place.img() + "' style='width: 50px; height: 50px;' />" + place.name()
   });
 
   google.maps.event.addListener(marker, 'click', function() {
@@ -41,7 +41,9 @@ function add_marker(place){
 
 var cursor;
 var cursor_callback = function(a, f){
-  console.log("Cursor at: " + a + "x" + f)
+  console.log("Cursor at: " + a + "x" + f);
+  $("#lon").val(a);
+  $("#lat").val(f);
 };
 
 function set_cursor(location) {
