@@ -7,6 +7,7 @@
     <script type="text/javascript" src="libs/konckout.js" ></script>
     <script type="text/javascript" src="libs/firebase.js" ></script>
     <script type="text/javascript" src="vms/main.js"></script>
+    <script type="text/javascript" src="vms/places.js"></script>
     <script type="text/javascript" src="libs/jquery.js">
     </script>
     <link rel="stylesheet" href="libs/materialize.min.css" charset="utf-8"></link>
@@ -19,9 +20,8 @@
             <span data-bind="text: name"></span>
           </div>
           <div class="col s9">
-             <div class="" data-bind="foreach:places">
+             <div class="" data-bind="foreach: places">
                <span data-bind="text:location "></span>
-               <img data-bind="attr:{src: image}" />
              </div>
           </div>
         </div>
@@ -30,6 +30,6 @@
 <script type="text/javascript">
   $(document).ready(function(){
     var db = new Firebase("https://glaring-heat-5949.firebaseio.com/");
-    ko.applyBindings(new Place());
+    ko.applyBindings(new Places(db));
   })
 </script>

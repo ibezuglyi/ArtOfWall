@@ -1,4 +1,4 @@
-var Place = function(){
-  this.location = ko.observable();
-  this.image = ko.observable();
+var Place = function(data){
+  this.location = ko.observable(data.location);
+  this.img = ko.observable(data.img);
 }
